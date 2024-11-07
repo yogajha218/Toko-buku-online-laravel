@@ -11,7 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        $table->id('book_id');
+        $table->string('titles');
+        $table->string('author');
+        $table->integer('price');
+        $table->integer('stock');
+        $table->timestamp();
+        $table->foreign('category_id')->references('category_id')->on('sales');
+
     }
 
     /**
@@ -19,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+
     }
 };

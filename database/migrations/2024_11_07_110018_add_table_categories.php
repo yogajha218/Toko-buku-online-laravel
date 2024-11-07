@@ -11,7 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        $table->id('category_id');
+        $table->string('name');
     }
 
     /**
